@@ -15,9 +15,9 @@ import static java.time.temporal.ChronoUnit.HOURS;
 @Service
 public class JwtService {
 
-    public final JwtEncoder jwtEncoder;
+    private final JwtEncoder jwtEncoder;
 
-    public JwtService(JwtEncoder jwtEncoder) {
+    private JwtService(JwtEncoder jwtEncoder) {
         this.jwtEncoder = jwtEncoder;
     }
 
