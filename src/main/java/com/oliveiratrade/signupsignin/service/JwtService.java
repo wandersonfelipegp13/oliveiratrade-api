@@ -1,4 +1,4 @@
-package com.oliveiratrade.signupsignin.servive;
+package com.oliveiratrade.signupsignin.service;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;

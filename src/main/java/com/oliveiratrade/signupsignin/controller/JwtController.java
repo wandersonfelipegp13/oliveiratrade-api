@@ -1,6 +1,6 @@
 package com.oliveiratrade.signupsignin.controller;
 
-import com.oliveiratrade.signupsignin.servive.JwtService;
+import com.oliveiratrade.signupsignin.service.JwtService;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
