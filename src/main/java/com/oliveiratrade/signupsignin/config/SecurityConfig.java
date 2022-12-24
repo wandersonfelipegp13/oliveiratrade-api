@@ -8,7 +8,6 @@ import com.nimbusds.jose.jwk.source.JWKSource;
 import com.nimbusds.jose.proc.SecurityContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer;
@@ -60,6 +59,7 @@ public class SecurityConfig {
                         .requestMatchers(toH2Console()).permitAll()
                         .requestMatchers("/users").permitAll()
                         .requestMatchers("/token").authenticated()
+                        .requestMatchers("/users/profile").authenticated()
                 )
                 .headers((headers) -> headers.frameOptions().sameOrigin())
                 .sessionManagement((session) -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
